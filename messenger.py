@@ -2,7 +2,7 @@ import fbchat
 from fbchat import Client
 from fbchat.models import *
 from getpass import getpass
-client = Client('kvinay573@gmail.com', 'combatkiller')
+client = Client('username/email-id','password')
 
 no_of_friends = int(input("Number of friends: "))
 for i in range(no_of_friends):
