@@ -2,6 +2,7 @@ import fbchat
 from fbchat import Client
 from fbchat.models import *
 from getpass import getpass
+# You can also use getpass module to take input the password without echoing
 client = Client('username/email-id','password')
 
 no_of_friends = int(input("Number of friends: "))
@@ -13,4 +14,6 @@ for i in range(no_of_friends):
     sent = client.send(fbchat.models.Message(text=msg), thread_id=friend.uid, thread_type=ThreadType.USER)
     if sent:
         print("Message sent successfully!")
+
+	
 client.logout()
