@@ -3,9 +3,9 @@ from fbchat import Client
 from fbchat.models import *
 from getpass import getpass
 from easygui import passwordbox
-
-# You can also use getpass module to take input the password without echoing
-username = str(input("Username: "))
+import easygui
+username = easygui.enterbox("Username:")
+#username = str(input("Username: "))
 password = passwordbox("PASSWORD:")
 client = fbchat.Client(username,password)
 
