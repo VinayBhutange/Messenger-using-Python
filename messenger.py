@@ -4,7 +4,7 @@ from fbchat.models import *
 from getpass import getpass
 from easygui import passwordbox
 import easygui
-username = easygui.enterbox("Username:")
+username = easygui.enterbox("Enter Username/Email-Id:")
 #username = str(input("Username: "))
 password = passwordbox("PASSWORD:")
 client = fbchat.Client(username,password)
