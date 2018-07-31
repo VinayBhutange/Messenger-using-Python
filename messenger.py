@@ -9,14 +9,14 @@ username = easygui.enterbox("Enter Username/Email-Id:")
 password = passwordbox("PASSWORD:")
 client = fbchat.Client(username,password)
 
-no_of_friends = int(input("Number of friends: "))
+no_of_friends = easygui.integerbox("Enter No. of friends")
 for i in range(no_of_friends):
-    name = str(input("Name:"))
+    name = easygui.enterbox("Name of friends")
     friends = client.searchForUsers(name)  # return a list of names
     friend = friends[0]
-    msg = str(input("Message: "))
+    msg = easygui.enterbox("Message")
     sent = client.send(fbchat.models.Message(text=msg), thread_id=friend.uid, thread_type=ThreadType.USER)
     if sent:
-        print("Message sent successfully!")
+        easygui.msgbox("Message sent successfully!")
 
 client.logout()
