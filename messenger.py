@@ -6,7 +6,7 @@ from easygui import passwordbox
 import easygui
 username = easygui.enterbox("Enter Username/Email-Id:")
 #username = str(input("Username: "))
-password = passwordbox("PASSWORD:")
+password = passwordbox("Password: ")
 client = fbchat.Client(username,password)
 
 no_of_friends = easygui.integerbox("Enter No. of friends")
